@@ -16,7 +16,8 @@
     "./button": "./src/components/ui/button.tsx",
     "./globals.css": "./src/globals.css",
     "./postcss.config.cjs": "./postcss.config.cjs",
-    "./tailwind.config.ts": "./tailwind.config.ts"
+    "./tailwind.config.ts": "./tailwind.config.ts",
+    "./cn": "./src/utils/cn.ts"
   },
   "scripts": {
     "build": "tsc && vite build",
