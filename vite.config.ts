@@ -2,6 +2,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
+import { libInjectCss } from 'vite-plugin-lib-inject-css'
 
 export default defineConfig({
   build: {
@@ -17,7 +18,10 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true
   },
-  plugins: [dts()],
+  plugins: [
+    libInjectCss(),
+    dts({ include: ['src'] })
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
