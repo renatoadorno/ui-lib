@@ -1,7 +1,6 @@
 {
   "name": "uilib",
   "version": "1.0.0",
-  "sideEffects": false,
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -10,8 +9,13 @@
     "/dist",
     "tailwind.config.ts",
     "postcss.config.cjs",
-    "src/globals.css"
+    "src/globals.css",
+    "src/components/ui/button.tsx"
   ],
+  "exports": {
+    "./button": "./src/components/ui/button.tsx",
+    "./globals.css": "./src/globals.css"
+  },
   "scripts": {
     "build": "tsc && vite build",
     "prepare": "tsc && vite build"
